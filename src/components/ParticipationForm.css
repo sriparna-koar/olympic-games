@@ -1,0 +1,50 @@
+.ParticipationForm {
+    background-color: rgb(149, 103, 16);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #110101;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  select,
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #662828;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #c5bfbf;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0c2035;
+  }
+  

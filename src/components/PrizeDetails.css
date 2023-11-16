@@ -1,0 +1,25 @@
+.PrizeDetails {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(82, 45, 45, 0.1);
+    text-align: centre;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .PrizeDetails h2 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+  }
+  
+  .PrizeDetails p {
+    font-size: 2rem;
+    margin: 5px 0;
+    
+  
+  }
+  
+  /* You can add more styles as needed */
+  
