@@ -1,0 +1,59 @@
+/* HomePage.css */
+
+.home {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .sport-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .sport-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .sport-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .sport-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  
+  .sport-card ul {
+    padding-left: 20px;
+  }
+  
+  .sport-card li {
+    margin-bottom: 5px;
+  }
+  
+  .schedule-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: blue;
+  }
+  
+  .schedule-link:hover {
+    text-decoration: underline;
+    color: navy;
+  }
+  

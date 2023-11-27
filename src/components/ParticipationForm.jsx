@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './ParticipationForm.css';
 
 const ParticipationForm = ({ onAddDetails }) => {
@@ -9,22 +10,81 @@ const ParticipationForm = ({ onAddDetails }) => {
   const [age, setAge] = useState('');
   const [country, setCountry] = useState('');
   const [submittedData, setSubmittedData] = useState(null);
+  const [additionalNotes, setAdditionalNotes] = useState('');
+  const [eventError, setEventError] = useState('');
+  const [gameError, setGameError] = useState('');
+  const [seasonError, setseasonError] = useState('');
+  const [ageError, setageError] = useState('');
+  const [countryError, setcountryError] = useState('');
+  const [participantnameError, setparticipantnameError] = useState('');
+  const formVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5 } },
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create an object with the form data and pass it to the parent component.
+    let formIsValid = true;
+    if (!event.trim()) {
+      setEventError('Please select an event');
+      formIsValid = false;
+    } else {
+      setEventError('');
+    }
+
+    if (!game.trim()) {
+      setGameError('Please select game');
+      formIsValid = false;
+    } else {
+      setGameError('');
+    }
+    if (!age.trim()) {
+      setageError('Please select Participant age');
+      formIsValid = false;
+    } else {
+      setageError('');
+    }
+    if (!season.trim()) {
+      setageError('Please select season');
+      formIsValid = false;
+    } else {
+      setseasonError('');
+    }
+    if (!country.trim()) {
+      setageError('Please select country');
+      formIsValid = false;
+    } else {
+      setcountryError('');
+    }
+    if (!participantName.trim()) {
+      setageError('Please select ParticipantName');
+      formIsValid = false;
+    } else {
+      setparticipantnameError('');
+    }
+
+    if (formIsValid) {
     const participationData = {
       event,
       season,
       game,
       participantName,
       age,
+      country,
+      additionalNotes,
     };
-    onFormSubmit(game, event, season, participationData); 
-    // onAddDetails(participationData);
+    // onFormSubmit(game, event, season, participationData);
+    onAddDetails(participationData);
+  }
   };
 
   return (
+    <motion.div
+      className="ParticipationForm"
+      initial="hidden"
+      animate="visible"
+      variants={formVariants}
+    >
     <div className="ParticipationForm">
       <h2>Olympic and Paralympic Game Participation Form</h2>
       <form onSubmit={handleSubmit}>
@@ -49,7 +109,7 @@ const ParticipationForm = ({ onAddDetails }) => {
             {event === 'olympic' ? (
               season === 'summer' ? (
                 <>
-                  
+
                   <option value="athletics">Summer Lists</option>
                   <option value="rowing">Rowing</option>
                   <option value="diving">Diving</option>
@@ -59,7 +119,7 @@ const ParticipationForm = ({ onAddDetails }) => {
                   <option value="Sport climbing">Sport climbing</option>
                   <option value="Tennis">Tennis</option>
                   <option value="Freestyle BMX">Freestyle BMX</option>
-                  
+
                 </>
               ) : (
                 <>
@@ -114,8 +174,47 @@ const ParticipationForm = ({ onAddDetails }) => {
           <label>Country:</label>
           <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} />
         </div>
-        
-        <button type="submit">Submit</button>
+        <div>
+          <label>Gender:</label>
+          <select>
+
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label>Medal Won :</label>
+          {/* value={medalwon} */}
+          <input type="checkbox" id="gold" name="medal" value="gold" />
+          <label htmlFor="gold">Gold</label>
+          <input type="checkbox" id="silver" name="medal" value="silver" />
+          <label htmlFor="silver">Silver</label>
+          <input type="checkbox" id="bronze" name="medal" value="bronze" />
+          <label htmlFor="bronze">Bronze</label>
+          <input type="checkbox" id="none" name="medal" value="none" />
+          <label htmlFor="none">None</label>
+        </div>
+        <div>
+          <label>Additional Notes:</label>
+          <textarea
+            rows="4"
+            value={additionalNotes}
+            onChange={(e) => setAdditionalNotes(e.target.value)}
+          ></textarea>
+        </div>
+        {eventError && <p className="error-message">{eventError}</p>}
+      {gameError && <p className="error-message">{gameError}</p>}
+      {ageError && <p className="error-message">{ageError}</p>}
+      {seasonError && <p className="error-message">{seasonError}</p>}
+      {participantnameError && <p className="error-message">{participantnameError}</p>}
+      {countryError && <p className="error-message">{countryError}</p>}
+        <button type="submit" onClick={handleSubmit}>
+        Submit
+      </button>
+
+
+        {/* <button type="submit">Submit</button> */}
       </form>
       {submittedData && (
         <div className="SubmittedDetails">
@@ -126,10 +225,12 @@ const ParticipationForm = ({ onAddDetails }) => {
           <p>Participant Name: {submittedData.participantName}</p>
           <p>Participant Age: {submittedData.age}</p>
           <p>Country: {submittedData.country}</p>
-          {/* Render other submitted details as needed */}
+          <p>Additional Details: {submittedData.additionalNotes}</p>
+
         </div>
       )}
     </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,4 @@
-.ParticipationForm {
+/* .ParticipationForm {
     background-color: rgb(149, 103, 16);
     border: 1px solid #ccc;
     padding: 20px;
@@ -46,5 +46,77 @@
   
   button:hover {
     background-color: #0c2035;
+  }
+   */
+   .ParticipationForm {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #7c1818;
+    border-radius: 5px;
+    background-color: #260909;
+    overflow: hidden;
+  }
+  
+  .ParticipationForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .ParticipationForm form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ParticipationForm div {
+    margin-bottom: 10px;
+  }
+  
+  .ParticipationForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .ParticipationForm select,
+  .ParticipationForm input[type="text"],
+  .ParticipationForm input[type="number"],
+  .ParticipationForm textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+  }
+  
+  .ParticipationForm textarea {
+    resize: vertical;
+  }
+  
+  .ParticipationForm button[type="submit"] {
+    background-color: dark rgb(73, 23, 23);
+    color: rgb(182, 176, 176);
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .ParticipationForm button[type="submit"]:hover {
+    background-color: rgb(143, 106, 179);
+  }
+  
+  .SubmittedDetails {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #7b2525;
+    font-size: large;
+    border-radius: 5px;
+    background-color: #938989;
+  }
+  
+  .SubmittedDetails h2 {
+    margin-bottom: 10px;
   }
   

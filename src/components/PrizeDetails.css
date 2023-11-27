@@ -1,4 +1,4 @@
-.PrizeDetails {
+/* .PrizeDetails {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
@@ -19,7 +19,53 @@
     margin: 5px 0;
     
   
-  }
+  } */
   
   /* You can add more styles as needed */
+  /* PrizeDetailsForm.css */
+/* .formContainer {
+  max-width: 400px;
+  margin: 0 auto;
   
+}
+
+.fieldContainer {
+  margin-bottom: 20px;
+}
+
+.errorText {
+  color: red;
+  font-size: 12px;
+} */
+/* PrizeDetails.css */
+
+.formContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #947b7b;
+  border-radius: 5px;
+  font-size: 16px;
+
+  background-color: rgb(205, 205, 231);
+}
+.formContainer h2{
+  background-color: rgb(5, 5, 60);
+}
+.fieldContainer {
+  margin-bottom: 15px;
+}
+
+.fieldContainer .MuiFormControl-root {
+  width: 100%;
+}
+
+.errorText {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.submitButton {
+  margin-top: 15px;
+}
