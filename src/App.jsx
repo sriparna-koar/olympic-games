@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ParticipationForm from './components/ParticipationForm'; 
+import ParticipationForm from './components/ParticipationForm';
 import NavigationBar from './components/NavigationBar';
 import HomePage from './components/HomePage';
 import About from './components/About';
@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div>
       <NavigationBar />
       <Routes>
@@ -42,14 +42,14 @@ function App() {
 
           <p>Additional Notes: {submittedData.additionalNotes}</p>
           </div>
-          
+
 
         )}
-        
-    
+
+
       </div>
     </Router>
-    
+
   )
       };
 
