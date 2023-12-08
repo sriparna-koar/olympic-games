@@ -133,7 +133,7 @@ const About = () => {
       {filteredSports.map((sport) => (
           <div key={sport.id} className="sport-card">
             <h2>{sport.name}</h2>
-            <img src={sport.imageUrl || '/sport.jpeg' } alt="sports Games" />
+            <img src={sport.imageUrl || 'https://c8.alamy.com/comp/2G9A493/tokyo-24-07-2021-tokyo-aquatics-centre-olympic-games-swimming-heats-womens-100m-butterfly-heats-overview-of-the-start-during-the-race-photo-by-pro-shotssipa-usa-world-rights-except-austria-and-the-netherlands-2G9A493.jpg' } alt="sports Games" />
             <p>{sport.description}</p>
             <h3>{sport.name}</h3>
             <ul>
