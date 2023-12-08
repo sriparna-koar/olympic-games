@@ -1,0 +1,75 @@
+.register-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(205, 205, 231);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: rgb(124, 138, 149);
+    border: 1px solid #ccc;
+    color: hsl(0, 33%, 2%);
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+   
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0a335e;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .link {
+    color: #051e3a;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  h2{
+    color: #130d0d;
+    font-size: 35px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #130d0d;
+    font-size: 18px;
+
+  }
+  .login-link {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    color: #190b0b; /* Font color for the already registered message */
+  }

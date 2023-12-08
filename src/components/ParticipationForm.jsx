@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './ParticipationForm.css';
 
-const ParticipationForm = ({ onAddDetails }) => {
+const ParticipationForm = ({ onAddDetails,isAuthenticated }) => {
   const [event, setEvent] = useState('olympic');
   const [season, setSeason] = useState('summer');
   const [game, setGame] = useState('');
@@ -20,6 +20,7 @@ const ParticipationForm = ({ onAddDetails }) => {
   const formVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.5 } },
+   
   };
 
   const handleSubmit = (e) => {
@@ -73,7 +74,7 @@ const ParticipationForm = ({ onAddDetails }) => {
       country,
       additionalNotes,
     };
-    // onFormSubmit(game, event, season, participationData);
+    
     onAddDetails(participationData);
   }
   };
@@ -183,18 +184,18 @@ const ParticipationForm = ({ onAddDetails }) => {
             <option value="other">Other</option>
           </select>
         </div>
-        <div>
-          <label>Medal Won :</label>
-          {/* value={medalwon} */}
-          <input type="checkbox" id="gold" name="medal" value="gold" />
-          <label htmlFor="gold">Gold</label>
-          <input type="checkbox" id="silver" name="medal" value="silver" />
-          <label htmlFor="silver">Silver</label>
-          <input type="checkbox" id="bronze" name="medal" value="bronze" />
-          <label htmlFor="bronze">Bronze</label>
-          <input type="checkbox" id="none" name="medal" value="none" />
-          <label htmlFor="none">None</label>
-        </div>
+        <div className="medal-won">
+    <label>Medal Won</label>
+    <input type="checkbox" id="gold" name="medal" value="gold" />
+    <label htmlFor="gold">Gold</label>
+    <input type="checkbox" id="silver" name="medal" value="silver" />
+    <label htmlFor="silver">Silver</label>
+    <input type="checkbox" id="bronze" name="medal" value="bronze" />
+    <label htmlFor="bronze">Bronze</label>
+    <input type="checkbox" id="none" name="medal" value="none" />
+    <label htmlFor="none">None</label>
+  </div>
+
         <div>
           <label>Additional Notes:</label>
           <textarea

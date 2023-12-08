@@ -1,38 +1,15 @@
-import React from 'react';
+
+import React, { useState } from 'react';
+
 import './HomePage.css';
 
 const HomePage = () => {
- 
-  const sportsData = [
-    {
-      id: 1,
-      name: 'Swimming',
-      description: 'Learn about swimming events and techniques.',
-      
-      schedule: 'View Swimming Schedule', // Example schedule link
-      athletes: [
-        { id: 101, name: 'Michael Phelps', country: 'USA', achievements: '23 Gold Medals' },
-        // Add more athletes
-      ],
-    },
-    {
-      id: 2,
-      name: 'Gymnastics',
-      description: 'Explore gymnastics disciplines and performances.',
-      imageUrl: 'https://via.placeholder.com/150',
-      schedule: 'View Gymnastics Schedule', // Example schedule link
-      athletes: [
-        { id: 201, name: 'Simone Biles', country: 'USA', achievements: '4 Gold Medals' },
-        // Add more athletes
-      ],
-    },
-    // Add more sports data...
-  ];
+
 
   return (
     <div className="home">
       <h1>Welcome to the Olympic Games</h1>
-      <p>Explore various sports and events</p>
+     
       <div className="sports-list">
       <img src="/olympicgames.jpeg" alt="Olympic Games" />
       <p>Olympic Games, athletic festival that originated in ancient Greece and was revived in the late 19th century. Before the 1970s the Games were officially limited to competitors with amateur status, but in the 1980s many events were opened to professional athletes. Currently, the Games are open to all, even the top professional athletes in basketball and football (soccer). The ancient Olympic Games included several of the sports that are now part of the Summer Games program, which at times has included events in as many as 32 different sports. In 1924 the Winter Games were sanctioned for winter sports. The Olympic Games have come to be regarded as the world’s foremost sports competition.</p>
@@ -49,27 +26,14 @@ The Summer Games have a wider variety of events than the Winter Games. The most 
 All the sports of the Winter Games are played on snow or ice. Ice skating and skiing are crowd favorites. Skating events include graceful figure-skating competitions as well as speed-skating races. Ice hockey is a popular team event. The biathlon combines skiing and shooting. The Winter Games also include high-speed races on sleds called bobsleds and luges.
 
 The list of Olympic events can change. Sometimes popular new sports are added to the Games. In the late 1900s, for example, mountain biking, beach volleyball, and windsurfing became events at the Summer Games. Snowboarding was added to the Winter Games. In addition, women athletes now compete in sports that were once considered men’s events. Two such events are weight lifting and wrestling.</p>
-        {sportsData.map((sport) => (
-          <div key={sport.id} className="sport-card">
-           
-            <h2>{sport.name}</h2>
-            <img src="/sport.jpeg" alt="sports Games" />
-            <p>{sport.description}</p>
-            {/* <a href={`/${sport.id}/details`} className="schedule-link">{sport.schedule}</a> */}
-            <h3>Athletes:</h3>
-            <ul>
-              {sport.athletes.map((athlete) => (
-                <li key={athlete.id}>
-                  <strong>{athlete.name}</strong> ({athlete.country}) - {athlete.achievements}
-                </li>
-              ))}
-            </ul>
-           
-          </div>
-        ))}
+
+        
+    
       </div>
     </div>
   );
 };
 
 export default HomePage;
+
+

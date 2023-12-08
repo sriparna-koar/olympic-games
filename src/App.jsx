@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ParticipationForm from './components/ParticipationForm'; 
 import NavigationBar from './components/NavigationBar';
 import HomePage from './components/HomePage';
+import About from './components/About';
+import LoginForm from './components/LoginForm';
+import RegisterForm from './components/RegisterForm';
 import PrizeDetailsForm from './components/PrizeDetailsForm';
 import './App.css';
 
@@ -20,8 +23,11 @@ function App() {
       <NavigationBar />
       <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<About />} />
       <Route path="/participation-form" element={<ParticipationForm onAddDetails={handleFormSubmit} />} />
       <Route path="/prize-details" element={<PrizeDetailsForm />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/register" element={<RegisterForm />} />
       </Routes>
       {submittedData && (
         <div className="SubmittedDetails">

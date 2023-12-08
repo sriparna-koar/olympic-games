@@ -3,6 +3,13 @@
 .home {
     text-align: center;
     margin: 20px;
+ 
+    
+    
+  }
+  .home h1 {
+    text-align: center; /* Center the text horizontally */
+     /* Adjust the margin-top as needed for vertical positioning */
   }
   
   .sports-list {
@@ -23,6 +30,7 @@
   .sport-card h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    align-items: center;
   }
   
   .sport-card img {
@@ -51,9 +59,3 @@
     text-decoration: none;
     color: blue;
   }
-  
-  .schedule-link:hover {
-    text-decoration: underline;
-    color: navy;
-  }
-  
