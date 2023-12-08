@@ -11,7 +11,7 @@ const HomePage = () => {
       <h1>Welcome to the Olympic Games</h1>
      
       <div className="sports-list">
-      <img src="/olympicgames.jpeg" alt="Olympic Games" />
+      <img src="https://cdn.britannica.com/97/190997-131-33CAC3B9/Mens-Prelim-Bolshoy-Ice-Dome-Olympic-Winter-2014.jpg?w=600&q=60" alt="Olympic Games" />
       <p>Olympic Games, athletic festival that originated in ancient Greece and was revived in the late 19th century. Before the 1970s the Games were officially limited to competitors with amateur status, but in the 1980s many events were opened to professional athletes. Currently, the Games are open to all, even the top professional athletes in basketball and football (soccer). The ancient Olympic Games included several of the sports that are now part of the Summer Games program, which at times has included events in as many as 32 different sports. In 1924 the Winter Games were sanctioned for winter sports. The Olympic Games have come to be regarded as the world’s foremost sports competition.</p>
       <h1>Origins</h1>
       <p>
