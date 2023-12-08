@@ -1,28 +1,29 @@
 
 // import React from 'react';
 // import { Navbar, Container, Nav } from 'react-bootstrap';
-// import './NavigationBar.css'; 
+// import './NavigationBar.css';
 
 // export default function NavigationBar() {
 //   return (
 //     <Navbar className="custom-navbar" expand="lg">
 //       <Container>
-//         <Navbar.Brand href="/">Home</Navbar.Brand>
-        
-//         <Nav className="me-auto">
-//           <Nav.Link href="/participation-form" active>Participation Form</Nav.Link>
-//           <Nav.Link href="/prize-details" active>Prize Details Form</Nav.Link>
-//           <Nav.Link href="/login" active>Login Form</Nav.Link>
-//           <Nav.Link href="/register" active>Register Form</Nav.Link>
+//         <NavLink to="/">Home</NavLink>
 
-//           <Nav.Link href="https://github.com/yourusername" target="_blank">GitHub</Nav.Link>
-          
+//         <Nav className="me-auto">
+//           <NavLink to="/participation-form" active>Participation Form</NavLink>
+//           <NavLink to="/prize-details" active>Prize Details Form</NavLink>
+//           <NavLink to="/login" active>Login Form</NavLink>
+//           <NavLink to="/register" active>Register Form</NavLink>
+
+//           <NavLink to="https://github.com/yourusername" target="_blank">GitHub</NavLink>
+
 //         </Nav>
 //       </Container>
 //     </Navbar>
 //   );
 // }
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import './NavigationBar.css'; // Import your CSS file
 
@@ -30,17 +31,17 @@ export default function NavigationBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Home</Navbar.Brand>
+        <NavLink className="nav-link" to="/">Home</NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto justify-content-between w-100">
-          <Nav.Link href="/about">More Info</Nav.Link>
-            <Nav.Link href="/participation-form">Participation Form</Nav.Link>
-            <Nav.Link href="/prize-details">Prize Details Form</Nav.Link>
-            <Nav.Link href="/login">Login Form</Nav.Link>
-            <Nav.Link href="/register">Register Form</Nav.Link>
+          <NavLink className="nav-link" to="/about">More Info</NavLink>
+            <NavLink className="nav-link" to="/participation-form">Participation Form</NavLink>
+            <NavLink className="nav-link" to="/prize-details">Prize Details Form</NavLink>
+            <NavLink className="nav-link" to="/login">Login Form</NavLink>
+            <NavLink className="nav-link" to="/register">Register Form</NavLink>
           </Nav>
-          
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
