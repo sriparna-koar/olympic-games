@@ -1,27 +1,4 @@
 
-// import React from 'react';
-// import { Navbar, Container, Nav } from 'react-bootstrap';
-// import './NavigationBar.css';
-
-// export default function NavigationBar() {
-//   return (
-//     <Navbar className="custom-navbar" expand="lg">
-//       <Container>
-//         <NavLink to="/">Home</NavLink>
-
-//         <Nav className="me-auto">
-//           <NavLink to="/participation-form" active>Participation Form</NavLink>
-//           <NavLink to="/prize-details" active>Prize Details Form</NavLink>
-//           <NavLink to="/login" active>Login Form</NavLink>
-//           <NavLink to="/register" active>Register Form</NavLink>
-
-//           <NavLink to="https://github.com/yourusername" target="_blank">GitHub</NavLink>
-
-//         </Nav>
-//       </Container>
-//     </Navbar>
-//   );
-// }
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
