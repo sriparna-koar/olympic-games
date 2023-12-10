@@ -17,3 +17,10 @@
 .navbar-nav .nav-link:hover {
   color: #d6aeae; 
 }
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: 35px;
+  right: 40px;
+
+}
