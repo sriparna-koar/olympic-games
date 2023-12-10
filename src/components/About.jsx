@@ -119,7 +119,7 @@ const About = () => {
   }
 
   return (
-    <div className="home">
+    <div className="home1">
       <h1>More Info</h1>
       
 <input
