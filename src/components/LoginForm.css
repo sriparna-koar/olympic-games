@@ -1,6 +1,6 @@
-/* LoginForm.css */
+
 .login-form {
-    width: 500px;
+  width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -60,5 +60,5 @@
     font-size: 18px;
     text-align: center;
     margin-top: 15px;
-    color: #190b0b; /* Font color for the already registered message */
+    color: #190b0b; 
   }
