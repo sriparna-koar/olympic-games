@@ -21,9 +21,9 @@ const PrizeDetailsForm = () => {
   });
 
   const handleSubmit = (values, { resetForm }) => {
-    // Handle form submission (e.g., send data to backend, perform validation, etc.)
+    
     console.log('Form submitted:', values);
-    // Reset form fields after submission
+
     resetForm();
   };
 
