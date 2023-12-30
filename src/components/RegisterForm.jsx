@@ -10,7 +10,7 @@ const RegisterForm = ({ setRegistered }) => {
     event.preventDefault();
     
     alert('Registration successful! Now go back to login.');
-    setRegistered(false); // Go back to the login form after registration
+    setRegistered(false); 
   };
 
   const handleUsernameChange = (event) => {
