@@ -6,7 +6,7 @@ import './NavigationBar.css'; // Import your CSS file
 
 export default function NavigationBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar >
       <Container>
         <NavLink className="nav-link" to="/">Home</NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
