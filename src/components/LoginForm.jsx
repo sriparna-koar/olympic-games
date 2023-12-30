@@ -1,7 +1,7 @@
 // LoginForm.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './LoginForm.css'; // Import your CSS file
+import './LoginForm.css'; 
 
 const LoginForm = ({ isRegistered, setRegistered }) => {
   const [username, setUsername] = useState('');
