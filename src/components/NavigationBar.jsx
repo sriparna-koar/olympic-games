@@ -2,7 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import './NavigationBar.css'; // Import your CSS file
+import './NavigationBar.css'; 
 
 export default function NavigationBar() {
   return (
